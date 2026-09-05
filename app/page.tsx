@@ -12,7 +12,7 @@ const chapters = [
 ];
 
 function Mark({ className = '' }: { className?: string }) {
-  return <svg className={className} width="35" height="35" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M7 32V8h9v17M24 32V8h9v24M7 32l26-24" stroke="currentColor" strokeWidth="1.7" strokeLinecap="square" /></svg>;
+  return <svg className={className} width="35" height="35" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M9.51 8 20.21 13.26V26.68L9.45 32ZM30.49 14.15 22.69 18.05 22.63 26.68 30.55 32Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="square" /></svg>;
 }
 
 export default function Home() {
