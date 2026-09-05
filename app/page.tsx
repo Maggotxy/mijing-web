@@ -1,0 +1,117 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import { ArrowUpRight, ArrowDown, ArrowRight, Plus, Minus, Pause, Play, Menu, X } from 'lucide-react';
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+
+const chapters = [
+  { title: '理解你的企业', en: 'CONTEXT', line: '每家企业，都有自己的方式。', text: '从公司资料到签约偏好，让每一次处理，都有你企业的真实背景。', caption: '企业资料 · 公司规则' },
+  { title: '看清真正关键', en: 'CLARITY', line: '在纷繁条款中，找到关切。', text: '从企业的立场出发，解释风险意味着什么，让重要的问题变得清楚。', caption: '合同审查 · 用工预检' },
+  { title: '找到前行路径', en: 'DIRECTION', line: '有了判断，也有下一步。', text: '起草、修改、核对，衔接日常法务工作的每一步，让事情继续向前。', caption: '起草修改 · 核对归档' },
+  { title: '沉淀长期理解', en: 'CONTINUITY', line: '每一次积累，都让下一次从容。', text: '经你确认，留存企业规则与处理记录，让有价值的经验在企业中延续。', caption: '历史记录 · 企业知识' },
+];
+
+function Mark({ className = '' }: { className?: string }) {
+  return <svg className={className} width="35" height="35" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M7 32V8h9v17M24 32V8h9v24M7 32l26-24" stroke="currentColor" strokeWidth="1.7" strokeLinecap="square" /></svg>;
+}
+
+export default function Home() {
+  const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState(0);
+  const [menu, setMenu] = useState(false);
+  const [contact, setContact] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const section = useRef<HTMLElement>(null);
+  const stage = useRef<HTMLDivElement>(null);
+  const hero = useRef<HTMLElement>(null);
+  const video = useRef<HTMLVideoElement>(null);
+  const reduced = useRef(false);
+
+  useEffect(() => {
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const applyPreference = () => {
+      reduced.current = preference.matches;
+      if (preference.matches) { video.current?.pause(); setPaused(true); }
+    };
+    applyPreference();
+    preference.addEventListener('change', applyPreference);
+    let frame = 0;
+    let current = 0;
+    let previousChapter = -1;
+    const render = () => {
+      const top = section.current?.getBoundingClientRect().top ?? 0;
+      const length = (section.current?.offsetHeight ?? 1) - window.innerHeight;
+      const target = Math.max(0, Math.min(1, -top / Math.max(length, 1)));
+      current = reduced.current ? target : current + (target - current) * 0.09;
+      const index = Math.min(3, Math.floor(current * 4));
+      if (index !== previousChapter) { setActive(index); previousChapter = index; }
+      stage.current?.style.setProperty('--journey', String(current));
+      const planes = stage.current?.querySelectorAll<HTMLElement>('.glass-plane');
+      planes?.forEach((plane, i) => {
+        const phase = Math.max(0, Math.min(1, current * 4 - i));
+        const smooth = phase * phase * (3 - 2 * phase);
+        plane.style.transform = `translateZ(${i * 22 + (1 - smooth) * (170 + i * 48)}px)`;
+        plane.style.setProperty('--plane-opacity', String(0.36 + smooth * 0.5));
+      });
+      if (hero.current && !reduced.current) hero.current.style.setProperty('--hero-shift', `${Math.min(window.scrollY * 0.24, 220)}px`);
+      frame = requestAnimationFrame(render);
+    };
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    frame = requestAnimationFrame(render);
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('revealed'); observer.unobserve(entry.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+    return () => { cancelAnimationFrame(frame); observer.disconnect(); window.removeEventListener('scroll', onScroll); preference.removeEventListener('change', applyPreference); };
+  }, []);
+
+  function selectChapter(index: number) {
+    if (!section.current) return;
+    const top = section.current.getBoundingClientRect().top + window.scrollY;
+    const length = section.current.offsetHeight - window.innerHeight;
+    window.scrollTo({ top: top + length * ((index + 0.36) / 4), behavior: reduced.current ? 'instant' : 'smooth' });
+  }
+  function toggleVideo() {
+    if (!video.current) return;
+    if (video.current.paused) video.current.play().then(() => setPaused(false)).catch(() => setPaused(true));
+    else { video.current.pause(); setPaused(true); }
+  }
+  const nav = <><a href="#vision" onClick={() => setMenu(false)}>关于觅径</a><a href="#approach" onClick={() => setMenu(false)}>我们的方式</a><a href="#expertise" onClick={() => setMenu(false)}>日常法务</a></>;
+
+  return <>
+    <a href="#vision" className="skip-link">跳至主要内容</a>
+    <header className={`site-header ${scrolled || menu ? 'solid' : ''}`}>
+      <a href="#top" className="brand" aria-label="觅径首页"><Mark /><span>觅径<span className="brand-en">MIJING</span></span></a>
+      <nav className="desktop-nav" aria-label="主导航">{nav}</nav>
+      <div className="header-actions"><button className="pill header-cta" onClick={() => setContact(true)}>预约体验 <span><ArrowUpRight size={16} /></span></button><button className="menu-toggle" aria-label={menu ? '关闭导航' : '打开导航'} aria-expanded={menu} onClick={() => setMenu(!menu)}>{menu ? <X /> : <Menu />}</button></div>
+      {menu && <nav className="mobile-nav" aria-label="移动导航">{nav}</nav>}
+    </header>
+    <main>
+      <section className="hero" id="top" ref={hero} aria-label="觅径企业法务 AI">
+        <div className="hero-media"><video ref={video} autoPlay muted loop playsInline preload="auto" poster="/images/hero-poster.jpg" onPlay={() => setPaused(false)} onPause={() => setPaused(true)}><source src="/images/hero.mp4" type="video/mp4" /></video></div>
+        <div className="hero-shade" />
+        <div className="hero-topline"><span className="small-dot" /> 为企业前行，觅一条明径</div>
+        <div className="hero-content"><p className="eyebrow">MIJING / LEGAL INTELLIGENCE</p><h1>纷繁之中，<br />自有明径。</h1><div className="hero-bottom"><p>你的企业法务 AI。<br className="mobile-break" /> 让经营的每一步，更有把握。</p><a href="#approach" className="pill light">探索觅径 <span><ArrowDown size={17} /></span></a></div></div>
+        <div className="hero-foot"><a href="#vision" className="scroll-label"><span className="scroll-track" />向下，发现更多</a><button className="video-toggle" onClick={toggleVideo} aria-label={paused ? '播放背景视频' : '暂停背景视频'}>{paused ? <Play size={14} /> : <Pause size={14} />}<span>{paused ? '播放影像' : '暂停影像'}</span></button></div>
+        <div className="hero-index" aria-hidden="true">01 — 04</div>
+      </section>
+      <section className="vision section-pad" id="vision"><div className="section-kicker reveal"><span className="small-dot" /> 为每一家向前的企业</div><div className="vision-main reveal"><h2>心有方向，<br />经营自有从容。</h2><div><p>一份新的合作，一位新来的同事，<br />一个需要认真作出的决定。</p><p>觅径将 AI 带入企业日常法务，<br />陪你理清纷繁，让前行有据。</p></div></div><div className="vision-foot"><span>从日常开始，理解你的企业。</span><Mark /></div></section>
+      <section className="journey" id="approach" ref={section} aria-label="觅径的工作方式">
+        <div className="journey-sticky">
+          <div className="journey-heading"><p className="eyebrow">THE MIJING APPROACH</p><h2>层层理解，<br />步步清晰。</h2></div>
+          <div className="chapter-list">{chapters.map((chapter, i) => <button key={chapter.en} className={`chapter ${active === i ? 'active' : ''}`} onClick={() => selectChapter(i)} aria-current={active === i ? 'step' : undefined}><span className="chapter-heading"><span className="chapter-number">0{i + 1}</span><span>{chapter.title}</span>{active === i ? <Minus size={17} /> : <Plus size={17} />}</span><span className="chapter-detail"><span>{chapter.text}</span><small>{chapter.caption}</small></span></button>)}</div>
+          <div className="stack-stage" ref={stage} aria-hidden="true"><div className="stage-orbit" /><div className="stack-scene"><div className="stack-platform" />{chapters.map((chapter, i) => <div className={`glass-plane plane-${i} ${active === i ? 'is-active' : ''}`} key={chapter.en}><span className="plane-corner">MIJING · 0{i + 1}</span><div className="plane-route"><span /><span /><span /></div><div className="plane-label"><span>{chapter.en}</span><b>{chapter.title}</b></div><span className="plane-plus">+</span></div>)}</div><span className="axis axis-top">UNDERSTANDING / 理解</span><span className="axis axis-bottom">A CLEAR WAY FORWARD / 明径</span></div>
+          <div className="journey-bottom"><span className="journey-count">0{active + 1}<span> / 04</span></span><p key={active}>{chapters[active].line}</p><span className="journey-scroll">滚动，循径而下 <ArrowDown size={14} /></span></div>
+        </div>
+      </section>
+      <section className="expertise section-pad" id="expertise"><div className="expertise-heading reveal"><div><p className="eyebrow">CLOSER TO YOUR BUSINESS</p><h2>重要的日常，<br />值得认真对待。</h2></div><p>专注合同、用工与企业知识。<br />让日常法务，成为经营的支持。</p></div>
+        <div className="editorial-grid"><div className="expertise-image reveal"><img src="/images/hero-poster.jpg" alt="玻璃窗前的人们正在交流，远处是城市的轮廓" loading="lazy" /><div className="image-caption"><span>觅径 · 与企业同行</span><ArrowUpRight size={18} /></div></div><div className="expertise-rows"><article className="expertise-row reveal"><span className="row-number">01 / 合同</span><h3>让每一份合作，<br />都有清晰的共识。</h3><p>从起草、审查到条款修改，协助看清约定，妥善推进合作。</p><span className="row-meta">合同起草 · 审查修改 · 履约提醒 · 回款辅助</span></article><article className="expertise-row reveal"><span className="row-number">02 / 用工</span><h3>在人与企业之间，<br />多一份周全。</h3><p>从入职文件检查到离职风险预检，在行动之前，理解需要考虑的问题。</p><span className="row-meta">入职文件检查 · 离职与解除风险预检</span></article><article className="expertise-row reveal"><span className="row-number">03 / 企业知识</span><h3>让你的经验，<br />成为下一步的起点。</h3><p>留存企业资料与经你确认的规则，让每一次工作，都建立在已有的理解之上。</p><span className="row-meta">公司资料 · 企业规则 · 历史记录</span></article></div></div>
+      </section>
+      <section className="closing section-pad" id="contact"><div className="closing-top"><span className="eyebrow">YOUR BUSINESS. A CLEARER PATH.</span><Mark /></div><div className="closing-main reveal"><p>专注你的事业。</p><h2>前行的路，<br />一起看清。</h2><button className="pill light" onClick={() => setContact(true)}>与觅径同行 <span><ArrowUpRight size={18} /></span></button></div><div className="closing-line" aria-hidden="true"><span /></div><div className="closing-bottom"><span>为没有专职法务的企业，<br />带来随时可用的日常法务支持。</span><span>始于理解，行于明径。</span></div></section>
+    </main>
+    <footer className="footer section-pad"><div className="footer-top"><a href="#top" className="brand"><Mark /><span>觅径<span className="brand-en">MIJING</span></span></a><nav aria-label="页脚导航">{nav}</nav><a href="#top" className="back-top">回到顶部 <ArrowUpRight size={17} /></a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} 觅径科技</span><p>觅径提供日常法务辅助。重大、复杂法律事务，请咨询专业律师。</p><span>企业法务 AI</span></div></footer>
+    <Dialog open={contact} onOpenChange={setContact}><DialogContent className="contact-dialog"><Mark /><p className="eyebrow">LET’S FIND YOUR PATH</p><DialogTitle className="contact-title">期待，与你同行。</DialogTitle><DialogDescription className="contact-description">觅径企业法务 AI，为企业日常的合同与用工事务提供支持。<br /><br />当前为官网设计预览，预约体验通道尚未开放。</DialogDescription><button className="pill" onClick={() => setContact(false)}>继续探索 <span><ArrowRight size={16} /></span></button></DialogContent></Dialog>
+  </>;
+}
