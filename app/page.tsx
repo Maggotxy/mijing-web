@@ -11,6 +11,49 @@ const chapters = [
   { title: '沉淀长期理解', en: 'CONTINUITY', line: '每一次积累，都让下一次从容。', text: '经你确认，留存企业规则与处理记录，让有价值的经验在企业中延续。', caption: '历史记录 · 企业知识' },
 ];
 
+const planeMotifs = [
+  {
+    paths: [
+      { d: 'M26 28H76L130 68M26 78H124M26 128H76L130 88M94 16L142 57M94 140L142 99', opacity: 0.42 },
+      { d: 'M171 78H222L290 40', opacity: 0.72 },
+      { d: 'M152 60A18 18 0 1 0 152 96M159 61A18 18 0 0 1 159 95', opacity: 0.85 },
+    ],
+    nodes: [{ x: 26, y: 28, r: 3 }, { x: 26, y: 78, r: 3 }, { x: 26, y: 128, r: 3 }, { x: 290, y: 40, r: 3 }],
+  },
+  {
+    paths: [
+      { d: 'M26 28H91L139 57H206L260 24H294M26 126H91L139 99H206L260 134H294', opacity: 0.27 },
+      { d: 'M26 78H95L135 78H170M186 78H294', opacity: 0.92 },
+      { d: 'M164 56H157V64M192 56H199V64M164 100H157V92M192 100H199V92', opacity: 0.55 },
+    ],
+    nodes: [{ x: 26, y: 78, r: 3 }, { x: 178, y: 78, r: 8 }, { x: 294, y: 78, r: 3 }],
+  },
+  {
+    paths: [
+      { d: 'M125 28 158 44V94L125 110ZM198 45 169 59V94L198 110Z', opacity: 0.54 },
+      { d: 'M26 132H136Q163.5 132 163.5 105V43Q163.5 16 190 16H294', opacity: 0.92 },
+      { d: 'M279 10 294 16 279 22', opacity: 0.72 },
+    ],
+    nodes: [{ x: 26, y: 132, r: 3 }],
+  },
+  {
+    paths: [
+      { d: 'M26 122H89L139 78H205L252 34H294', opacity: 0.88 },
+      { d: 'M40 138H96L146 94H212L260 50H294M40 106H82L132 62H198L244 18H280', opacity: 0.23 },
+      { d: 'M89 132V144M139 88V108M205 88V108M252 44V64', opacity: 0.38 },
+    ],
+    nodes: [{ x: 26, y: 122, r: 3 }, { x: 89, y: 122, r: 4 }, { x: 139, y: 78, r: 4 }, { x: 205, y: 78, r: 4 }, { x: 252, y: 34, r: 4 }, { x: 294, y: 34, r: 3 }],
+  },
+];
+
+function PlaneMotif({ index }: { index: number }) {
+  const motif = planeMotifs[index];
+  return <svg viewBox="0 0 320 160" width="100%" height="100%" fill="none" stroke="#78956c" strokeWidth="1.15" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    {motif.paths.map((path, i) => <path key={i} d={path.d} opacity={path.opacity} />)}
+    {motif.nodes.map((node, i) => <circle key={i} cx={node.x} cy={node.y} r={node.r} fill="#edf1e7" strokeOpacity="0.78" />)}
+  </svg>;
+}
+
 function Mark({ className = '' }: { className?: string }) {
   return <svg className={className} width="35" height="35" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M9.51 8 20.21 13.26V26.68L9.45 32ZM30.49 14.15 22.69 18.05 22.63 26.68 30.55 32Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="square" /></svg>;
 }
@@ -102,7 +145,7 @@ export default function Home() {
         <div className="journey-sticky">
           <div className="journey-heading"><p className="eyebrow">THE MIJING APPROACH</p><h2>层层理解，<br />步步清晰。</h2></div>
           <div className="chapter-list">{chapters.map((chapter, i) => <button key={chapter.en} className={`chapter ${active === i ? 'active' : ''}`} onClick={() => selectChapter(i)} aria-current={active === i ? 'step' : undefined}><span className="chapter-heading"><span className="chapter-number">0{i + 1}</span><span>{chapter.title}</span>{active === i ? <Minus size={17} /> : <Plus size={17} />}</span><span className="chapter-detail"><span>{chapter.text}</span><small>{chapter.caption}</small></span></button>)}</div>
-          <div className="stack-stage" ref={stage} aria-hidden="true"><div className="stage-orbit" /><div className="stack-scene"><div className="stack-platform" />{chapters.map((chapter, i) => <div className={`glass-plane plane-${i} ${active === i ? 'is-active' : ''}`} key={chapter.en}><span className="plane-corner">MIJING · 0{i + 1}</span><div className="plane-route"><span /><span /><span /></div><div className="plane-label"><span>{chapter.en}</span><b>{chapter.title}</b></div><span className="plane-plus">+</span></div>)}</div><span className="axis axis-bottom">A CLEAR WAY FORWARD / 明径</span></div>
+          <div className="stack-stage" ref={stage} aria-hidden="true"><div className="stage-orbit" /><div className="stack-scene"><div className="stack-platform" />{chapters.map((chapter, i) => <div className={`glass-plane plane-${i} ${active === i ? 'is-active' : ''}`} key={chapter.en}><span className="plane-corner">MIJING · 0{i + 1}</span><div className="plane-route"><PlaneMotif index={i} /></div><div className="plane-label"><span>{chapter.en}</span><b>{chapter.title}</b></div><span className="plane-plus">+</span></div>)}</div><span className="axis axis-bottom">A CLEAR WAY FORWARD / 明径</span></div>
           <div className="journey-bottom"><span className="journey-count">0{active + 1}<span> / 04</span></span><p key={active}>{chapters[active].line}</p><span className="journey-scroll">滚动，循径而下 <ArrowDown size={14} /></span></div>
         </div>
       </section>
