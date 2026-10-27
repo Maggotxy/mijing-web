@@ -24,3 +24,11 @@
 - 源站3100、代理3101、mjvia.com/www四份HTML SHA完全相同，中文无replacement字符；视频Range206。证据evidence/20261027/hydration-http.json。
 - 真实当前Chrome导航、展开FAQ后pageerror为空，原React418未再出现。截图受当前Chrome小窗口与视口截图偏移影响，DOM/HTTP证据与视觉验收分开，不以截图文件存在冒称完整视觉通过。
 - 未push，未新增备份。
+
+## 2026-10-28 官网页面与代理一致性修复
+
+- 发现实际 Nginx 配置在 React 页面外再次注入 SEO、H1 和页脚；民法典外链返回 404，源码与公网正文出现差异。
+- 将有效分享元信息、订阅、图标、组织信息、视频元信息和备案页脚统一放入应用；法律资料入口改为已实测 200 的全国人大国家法律法规数据库。
+- 保留代理现有安全响应头、静态 SEO/验证资源、404、媒体 Range、缓存与路由；候选配置移除 HTML sub_filter，不修改法务服务。
+- app oxlint、TypeScript 与构建通过；全仓未用 UI 模板的历史 lint 问题未宣称通过。部署读回另附。
+- MiniMax-H3 原片生成记录与线上视频 hash 对应原有 docs/original-media-20261027.json，本轮未再次调用视频生成。

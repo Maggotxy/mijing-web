@@ -709,6 +709,14 @@ export default function Home() {
           <p>觅径提供日常法务辅助。重大、复杂法律事务，请咨询专业律师。</p>
           <span>企业法务 AI</span>
         </div>
+        <div className="footer-legal">
+          <nav aria-label="网站与法律资料">
+            <a href="https://mjvia.com/about">关于觅径</a>
+            <a href="https://flk.npc.gov.cn/" target="_blank" rel="noopener noreferrer">国家法律法规数据库</a>
+            <a href="https://www.court.gov.cn/" target="_blank" rel="noopener noreferrer">最高人民法院</a>
+          </nav>
+          <p><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">津ICP备2026009754号-2</a><span>天津觅径科技有限公司</span></p>
+        </div>
       </footer>
     </>
   );

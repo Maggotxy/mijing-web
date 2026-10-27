@@ -51,3 +51,5 @@
 .faq-list details[open] summary svg{transform:rotate(45deg)}
 .faq-list details p{margin-top:16px;max-width:65ch;line-height:1.9;color:#52634c;overflow-wrap:anywhere}
 @media(max-width:760px){.faq-section{grid-template-columns:1fr;gap:32px;padding-top:56px;padding-bottom:56px}.faq-heading h2{max-width:none;font-size:28px}.faq-heading p{margin-top:12px}.faq-list summary{font-size:16px}}
+
+.footer-legal{display:grid;gap:16px;margin-top:22px;color:#596650;font-size:12px;line-height:1.8}.footer-legal nav{font-size:12px;color:inherit;gap:14px 24px}.footer-legal p{display:flex;flex-wrap:wrap;gap:8px 24px}.footer-legal a:hover{text-decoration:underline}.footer-legal a:focus-visible{outline:2px solid #294e3c;outline-offset:4px}
