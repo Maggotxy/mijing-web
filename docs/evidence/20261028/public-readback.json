@@ -1,0 +1,56 @@
+{
+  "at": "2026-10-27T21:18:19.837430+00:00",
+  "checks": [
+    {
+      "url": "http://127.0.0.1:3100/",
+      "host": "mjvia.com",
+      "status": 200,
+      "sha256": "40008eca9c86cb6a5374b0b43d914afd02d7947e7e8a58fbbe35abb918a6c1bc",
+      "utf8_replacement": 0,
+      "old_link": false,
+      "legal_database_link": true,
+      "icp": true,
+      "footer_legal_count": 1
+    },
+    {
+      "url": "http://127.0.0.1:3101/",
+      "host": "mjvia.com",
+      "status": 200,
+      "sha256": "40008eca9c86cb6a5374b0b43d914afd02d7947e7e8a58fbbe35abb918a6c1bc",
+      "utf8_replacement": 0,
+      "old_link": false,
+      "legal_database_link": true,
+      "icp": true,
+      "footer_legal_count": 1
+    },
+    {
+      "url": "https://mjvia.com/",
+      "host": null,
+      "status": 200,
+      "sha256": "40008eca9c86cb6a5374b0b43d914afd02d7947e7e8a58fbbe35abb918a6c1bc",
+      "utf8_replacement": 0,
+      "old_link": false,
+      "legal_database_link": true,
+      "icp": true,
+      "footer_legal_count": 1
+    },
+    {
+      "url": "https://www.mjvia.com/",
+      "host": null,
+      "status": 200,
+      "sha256": "40008eca9c86cb6a5374b0b43d914afd02d7947e7e8a58fbbe35abb918a6c1bc",
+      "utf8_replacement": 0,
+      "old_link": false,
+      "legal_database_link": true,
+      "icp": true,
+      "footer_legal_count": 1
+    }
+  ],
+  "video": {
+    "status": 200,
+    "bytes": 3988993,
+    "sha256": "2845b8e4d6b0dd5443bba62c4261c6bd4c4b4d789fd431979d9d38f01a4f857a"
+  },
+  "model": "/data/models/MiniMax-H3",
+  "generation_job": "68431848-fa8c-457f-98a6-998b54dd7f25"
+}

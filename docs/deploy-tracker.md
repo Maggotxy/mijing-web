@@ -32,3 +32,5 @@
 - 保留代理现有安全响应头、静态 SEO/验证资源、404、媒体 Range、缓存与路由；候选配置移除 HTML sub_filter，不修改法务服务。
 - app oxlint、TypeScript 与构建通过；全仓未用 UI 模板的历史 lint 问题未宣称通过。部署读回另附。
 - MiniMax-H3 原片生成记录与线上视频 hash 对应原有 docs/original-media-20261027.json，本轮未再次调用视频生成。
+
+部署完成：d7195c5，nginx -t通过后重载，mjvia-web.service重启active。使用正确Host核对3100/3101/官网/www四份HTML SHA一致，中文正常、备案与法律资料入口存在，失效链接消失；线上视频hash与MiniMax-H3生成回执一致。无push、新备份或法务服务重启。Nginx既有其他站点server_name警告保留，未改动无关站点。
