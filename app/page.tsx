@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { faqs } from './faq';
 import {
   ArrowUpRight,
   ArrowDown,
@@ -670,6 +671,20 @@ export default function Home() {
               带来随时可用的日常法务支持。
             </span>
             <span>始于理解，行于明径。</span>
+          </div>
+        </section>
+        <section id="faq" className="faq-section section-pad" aria-labelledby="faq-title">
+          <div className="faq-heading">
+            <h2 id="faq-title">开始之前，你可能想了解</h2>
+            <p>从一份合同开始，把每一步看清。</p>
+          </div>
+          <div className="faq-list">
+            {faqs.map(({ question, answer }) => (
+              <details key={question}>
+                <summary>{question}<Plus size={18} aria-hidden="true" /></summary>
+                <p>{answer}</p>
+              </details>
+            ))}
           </div>
         </section>
       </main>

@@ -15,3 +15,12 @@
 
 ## 2026-10-27 手机正文与说明文字核验
 真实Chrome中等待响应式过渡结束后，正文颜色与背景正确；首个章节small继承桌面0.75透明度，已统一手机端为1并关闭手机章节过渡。app目录oxlint零错误、vinext构建通过；全仓oxlint另有19条既有未用UI库诊断，未当作通过。MiniMax-H3视频实际1344×768/readyState4，三个生产工作台链接正确。浏览器出现React418，根因尚未确认，未用suppressHydrationWarning屏蔽。
+
+## 2026-10-27 官网页面与React渲染统一
+- 根因：craft nginx /etc/nginx/conf.d/mjvia-site.conf 在head后/main尾注入SEO与FAQ，RSC没有对应节点。
+- 已将FAQ、分享元信息和JSON-LD写入app/page.tsx、app/faq.ts、app/layout.tsx；分享图使用实际存在的H3 poster。
+- 移除两个sub_filter，保留3101、媒体Range及SEO静态路径；配置存ops/nginx-mjvia-site.conf。nginx -t后reload，mjvia-web.service重启active。
+- app oxlint零错误；TypeScript与vinext构建通过。全仓既有UI库lint问题未扩大处理。
+- 源站3100、代理3101、mjvia.com/www四份HTML SHA完全相同，中文无replacement字符；视频Range206。证据evidence/20261027/hydration-http.json。
+- 真实当前Chrome导航、展开FAQ后pageerror为空，原React418未再出现。截图受当前Chrome小窗口与视口截图偏移影响，DOM/HTTP证据与视觉验收分开，不以截图文件存在冒称完整视觉通过。
+- 未push，未新增备份。

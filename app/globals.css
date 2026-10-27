@@ -38,3 +38,16 @@
   .hero-media{will-change:auto}.footer nav{column-gap:22px}
 }
 @media(prefers-reduced-motion:reduce){.hero-media,.stack-scene,.glass-plane{will-change:auto}}
+
+/* FAQ is rendered with the same React tree on server and client. */
+.faq-section{padding-top:88px;padding-bottom:88px;display:grid;grid-template-columns:1fr 1.4fr;gap:64px;border-bottom:1px solid var(--border)}
+.faq-heading h2{font-family:var(--serif);font-size:clamp(28px,3vw,40px);line-height:1.5;max-width:12em}
+.faq-heading p{margin-top:20px;color:#52634c;line-height:1.8}
+.faq-list{min-width:0;border-top:1px solid #bdc9b7}
+.faq-list details{border-bottom:1px solid #bdc9b7;padding:22px 0}
+.faq-list summary{display:flex;justify-content:space-between;align-items:center;gap:20px;cursor:pointer;list-style:none;font-size:17px;line-height:1.7;font-weight:600}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary:focus-visible{outline:2px solid var(--green);outline-offset:6px}
+.faq-list details[open] summary svg{transform:rotate(45deg)}
+.faq-list details p{margin-top:16px;max-width:65ch;line-height:1.9;color:#52634c;overflow-wrap:anywhere}
+@media(max-width:760px){.faq-section{grid-template-columns:1fr;gap:32px;padding-top:56px;padding-bottom:56px}.faq-heading h2{max-width:none;font-size:28px}.faq-heading p{margin-top:12px}.faq-list summary{font-size:16px}}
