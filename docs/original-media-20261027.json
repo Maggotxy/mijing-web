@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "selected_model": "MiniMax-H3",
+  "job_id": "68431848-fa8c-457f-98a6-998b54dd7f25",
+  "generated_at": "2026-10-27",
+  "generation": {
+    "model": "/data/models/MiniMax-H3",
+    "prompt": "Raw live-action architectural camera footage, one continuous eight-second shot. A serene contemporary office courtyard in early morning, pale limestone floor, warm ivory walls, dark botanical green translucent glass, a narrow reflecting pool beside a clearly defined walkway leading toward a sunlit opening. At the right edge a small meeting area is visible through clear glass, with a pale oak table and chairs, all empty, no humans. Realistic fine materials, understated Chinese contemporary architecture, soft diffuse natural light, beautiful restrained forest green and ivory tones. Camera slowly moves right by a few centimeters per second, parallel to the glass, natural parallax, stable perspective and straight architectural lines. Left two thirds consist of quiet shadowed translucent glass and subtle light reflections, right third reveals the airy corridor and courtyard. Premium documentary architectural photography, 35mm cinema lens, realistic color, gentle contrast. The entire shot consists solely of photographed architectural surfaces, water and natural light. Completely clean raw footage without any graphic overlays, letters, Chinese characters, words, captions, titles, subtitles, signage, symbols, logos, or watermark anywhere. No title sequence, no presentation slide, no advertising card. Faint natural air and water ambient sound, no voices, no music.",
+    "task": "t2va",
+    "conditions": [],
+    "target": {
+      "short_edge": 768,
+      "aspect_ratio": "16:9",
+      "duration_seconds": 8
+    },
+    "quality": "exact",
+    "num_outputs_per_prompt": 1,
+    "num_inference_steps": 30,
+    "flow_shift": 12,
+    "audio_flow_shift": 3,
+    "seed": 20261028
+  },
+  "generation_receipt": {
+    "id": "68431848-fa8c-457f-98a6-998b54dd7f25",
+    "object": "video",
+    "model": "/data/models/MiniMax-H3",
+    "status": "completed",
+    "progress": 100,
+    "created_at": 1793086664,
+    "size": "1344x768",
+    "seconds": "8",
+    "quality": "exact",
+    "url": null,
+    "urls": [
+      null
+    ],
+    "remixed_from_video_id": null,
+    "completed_at": 1793086844,
+    "expires_at": null,
+    "error": null,
+    "file_path": "/data/work/outputs/68431848-fa8c-457f-98a6-998b54dd7f25.mp4",
+    "file_paths": [
+      "/data/work/outputs/68431848-fa8c-457f-98a6-998b54dd7f25.mp4"
+    ],
+    "num_outputs": 1,
+    "peak_memory_mb": 52048.0,
+    "inference_time_s": 174.74745728005655,
+    "revised_prompt": null,
+    "action": null
+  },
+  "web_processing": {
+    "loop": "8 second original followed by reversed shot; 16 second continuous return",
+    "video": "H.264 CRF 18 slow, yuv420p, faststart, no audio",
+    "poster": "frame 0s, WebP quality 90",
+    "detail": "frame 6s, WebP quality 90"
+  },
+  "visual_review": {
+    "source_samples": 24,
+    "text_or_watermark_visible": false,
+    "structural_distortion_observed": false,
+    "source_contact_sheet": ".codex-evidence/20261027-original-media/hero-r2-allframes.jpg",
+    "browser_validation": "pending"
+  },
+  "assets": {
+    "mijing-original.mp4": {
+      "bytes": 3988993,
+      "sha256": "2845b8e4d6b0dd5443bba62c4261c6bd4c4b4d789fd431979d9d38f01a4f857a"
+    },
+    "mijing-original-poster.webp": {
+      "bytes": 48356,
+      "sha256": "3d0395a13a1226acfa599bd7b87c233c63645bc101e31de7d7084bdc4ccb6856"
+    },
+    "mijing-original-detail.webp": {
+      "bytes": 69956,
+      "sha256": "1f0f0f89c21370607ed5a2aa058f73a067181e0c2e267195712353df8caaf939"
+    }
+  },
+  "source_sha256": "a6252705679fcc97d95540382a26fc856de3ce2ea14df9f0163cbc4ccdd5fc7d"
+}
