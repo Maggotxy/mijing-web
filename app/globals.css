@@ -32,7 +32,8 @@
   .chapter-heading{font-size:19px;display:flex;align-items:center;gap:14px;line-height:1.6}
   .chapter-number{display:inline;font-size:12px}.chapter-heading svg{display:none}
   .chapter-detail,.chapter.active .chapter-detail{display:block!important;height:auto!important;max-height:none!important;opacity:1!important;overflow:visible;margin-top:12px;font-size:15px;line-height:1.85;color:#52634c}
-  .chapter-detail small{display:block;margin-top:10px;font-size:12px;color:#596650}
+  .chapter-detail small,.chapter.active .chapter-detail small{display:block;margin-top:10px;font-size:12px;color:#596650;opacity:1}
+  .chapter,.chapter-detail{transition:none}
   .journey-bottom{position:static;margin-top:20px;padding-top:22px}.journey-count{display:none}.journey-bottom p{text-align:left;font-size:15px}
   .hero-media{will-change:auto}.footer nav{column-gap:22px}
 }
