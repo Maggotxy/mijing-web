@@ -1,0 +1,54 @@
+{
+  "at": "2026-10-27T08:12:09.437666+00:00",
+  "source_commit": "96b0a39734eb80d01e7728026c7a8e6b1da4e8e8",
+  "checks": [
+    {
+      "url": "https://mjvia.com/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 25030,
+      "sha256": "a85a3a5f1f7d01df0a0bfc7b828ef74811d10a34162feb324d3bb2e0b5ae1f37"
+    },
+    {
+      "url": "https://mjvia.com/images/mijing-original-poster.webp",
+      "status": 200,
+      "content_type": "image/webp",
+      "bytes": 48356,
+      "sha256": "3d0395a13a1226acfa599bd7b87c233c63645bc101e31de7d7084bdc4ccb6856"
+    },
+    {
+      "url": "https://mjvia.com/images/mijing-original-detail.webp",
+      "status": 200,
+      "content_type": "image/webp",
+      "bytes": 69956,
+      "sha256": "1f0f0f89c21370607ed5a2aa058f73a067181e0c2e267195712353df8caaf939"
+    },
+    {
+      "url": "https://mjvia.com/images/mijing-original.mp4",
+      "status": 200,
+      "content_type": "video/mp4",
+      "bytes": 3988993,
+      "sha256": "2845b8e4d6b0dd5443bba62c4261c6bd4c4b4d789fd431979d9d38f01a4f857a"
+    }
+  ],
+  "www_readback": {
+    "url": "https://www.mjvia.com/",
+    "status": 200,
+    "title_ok": true,
+    "workspace_links": 3,
+    "new_media": true,
+    "old_media": false,
+    "replacement_character": false,
+    "content_type": "text/html; charset=utf-8",
+    "sha256": "a85a3a5f1f7d01df0a0bfc7b828ef74811d10a34162feb324d3bb2e0b5ae1f37"
+  },
+  "range_readback": {
+    "range_status": 206,
+    "content_range": "bytes 0-1023/3988993",
+    "bytes": 1024
+  },
+  "service": "active",
+  "nginx_config_sha256": "d5170db5e3aa84ad6809542fe5520f4ae34e81059d851b3d2cb75597b2e591c2",
+  "browser": "deferred_by_user_until_program_and_deployment_complete",
+  "result": "PASS_HTTP_AND_ASSET_READBACK"
+}

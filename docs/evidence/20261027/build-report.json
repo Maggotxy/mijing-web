@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-27T08:07:01.921912+00:00",
+  "checks": [
+    {
+      "check": "format",
+      "exit_code": 0,
+      "log": "format-final.log"
+    },
+    {
+      "check": "lint_app",
+      "exit_code": 0,
+      "log": "lint_app-final.log"
+    },
+    {
+      "check": "typecheck",
+      "exit_code": 0,
+      "log": "typecheck-final.log"
+    },
+    {
+      "check": "build",
+      "exit_code": 0,
+      "log": "build-final.log"
+    }
+  ],
+  "files": {
+    "app/page.tsx": "a320b201911b7f29329c053095b1744383cbe05e32f82d5cbbc111abc418ad5b",
+    "app/globals.css": "a2c15637ed8237fbd2b6370879bdefd2bd6b446fd54ec1bb742d9a2fa37e1d42",
+    "docs/original-media-20261027.json": "7d15fa7877f8856517b88a671936b4f52bc6d02ba03db246c7348d87e4582bb9"
+  },
+  "browser_verification": "deferred_by_user_until_deployment_complete",
+  "baseline_whole_repo_lint": "20 errors in unused scaffolding; homepage lint clean"
+}
