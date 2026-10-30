@@ -36,3 +36,8 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# local runtime and build artifacts
+serve.log
+*.tsbuildinfo
+.codex-evidence/
