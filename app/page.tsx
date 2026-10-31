@@ -420,6 +420,7 @@ export default function Home() {
               onPlay={() => setPaused(false)}
               onPause={() => setPaused(true)}
             >
+              <source src="/images/hero-v4-4k.mp4" type="video/mp4" media="(min-width: 2560px), (min-resolution: 2dppx) and (min-width: 1280px)" />
               <source src="/images/hero-v4.mp4" type="video/mp4" />
             </video>
           </div>
