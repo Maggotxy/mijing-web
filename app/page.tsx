@@ -416,11 +416,11 @@ export default function Home() {
               loop
               playsInline
               preload="metadata"
-              poster="/images/hero-v3-poster.webp"
+              poster="/images/hero-v4-poster.webp"
               onPlay={() => setPaused(false)}
               onPause={() => setPaused(true)}
             >
-              <source src="/images/hero-v3.mp4" type="video/mp4" />
+              <source src="/images/hero-v4.mp4" type="video/mp4" />
             </video>
           </div>
           <div className="hero-shade" />
