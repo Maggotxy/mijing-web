@@ -52,5 +52,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: 'https://mjvia.com/survey/contract-management-2026',
+      lastModified: published,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: 'https://mjvia.com/monthly/2026-10',
+      lastModified: published,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ];
 }

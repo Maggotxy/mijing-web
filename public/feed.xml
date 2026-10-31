@@ -6,7 +6,7 @@
     <description>小觅法务是企业法务 AI 平台，专注合同、用工与企业知识，为没有专职法务的企业提供随时可用的日常法务支持。</description>
     <language>zh-CN</language>
     <copyright>天津觅径科技有限公司 · 津ICP备2026009754号-2</copyright>
-    <lastBuildDate>Sat, 31 Oct 2026 16:40:14 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 19:55:00 +0800</lastBuildDate>
     <atom:link href="https://mjvia.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>小觅法务 · 企业法务 AI</title>
@@ -56,6 +56,20 @@
       <guid isPermaLink="true">https://mjvia.com/guide/overdue-payment-recovery</guid>
       <pubDate>Sat, 31 Oct 2026 00:00:00 +0800</pubDate>
       <description>对方拖欠货款，先固定证据、书面催告，再选支付令或诉讼。诉讼时效一般三年，拖得越久越要先留痕。</description>
+    </item>
+    <item>
+      <title>中小企业合同管理现状调研 2026</title>
+      <link>https://mjvia.com/survey/contract-management-2026</link>
+      <guid isPermaLink="true">https://mjvia.com/survey/contract-management-2026</guid>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0800</pubDate>
+      <description>没有法务的中小企业，合同到底是怎么管的？15 道题，约 3–5 分钟，完全匿名，回答汇总成公开的行业数字。</description>
+    </item>
+    <item>
+      <title>小觅月报 2026-10</title>
+      <link>https://mjvia.com/monthly/2026-10</link>
+      <guid isPermaLink="true">https://mjvia.com/monthly/2026-10</guid>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0800</pubDate>
+      <description>小觅月报 2026 年 10 月：品牌统一为小觅法务，5 篇指南上线，官网视频换新，价格 4,999 元/年，调研启动。</description>
     </item>
   </channel>
 </rss>
