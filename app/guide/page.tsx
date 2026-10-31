@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '指南 | 小觅法务',
-  description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款。答案前置、引用法条原文，给可验证的做法。',
+  description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办。答案前置、引用法条原文，给可验证的做法。',
   alternates: { canonical: '/guide' },
   openGraph: {
     title: '指南 | 小觅法务',
-    description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款。答案前置、引用法条原文，给可验证的做法。',
+    description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办。答案前置、引用法条原文，给可验证的做法。',
     type: 'website',
     url: '/guide',
     images: [{ url: '/images/og-image.png', width: 1200, height: 630, alt: '小觅法务 · 企业法务 AI' }],
@@ -20,12 +20,15 @@ const structuredData = {
     {
       '@type': 'CollectionPage',
       name: '指南',
-      description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款。',
+      description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办。',
       url: 'https://mjvia.com/guide',
       isPartOf: { '@type': 'WebSite', name: '小觅法务', url: 'https://mjvia.com/' },
       hasPart: [
         { '@type': 'Article', headline: '中小企业没有法务，怎么审合同', url: 'https://mjvia.com/guide/sme-contract-review' },
         { '@type': 'Article', headline: '合同审查重点看哪些条款', url: 'https://mjvia.com/guide/contract-key-clauses' },
+        { '@type': 'Article', headline: '入职文件检查清单', url: 'https://mjvia.com/guide/onboarding-document-checklist' },
+        { '@type': 'Article', headline: '解除与离职风险预检', url: 'https://mjvia.com/guide/termination-risk-check' },
+        { '@type': 'Article', headline: '对方拖欠货款怎么办', url: 'https://mjvia.com/guide/overdue-payment-recovery' },
       ],
     },
     {
@@ -56,6 +59,24 @@ export default function GuideIndex() {
           <a href="/guide/contract-key-clauses">
             <h2>合同审查重点看哪些条款</h2>
             <p>审合同先看哪几条、哪几类条款最容易埋雷、违约金和定金怎么写才有效。按《民法典》合同编逐条对照，附可直接用的检查清单。</p>
+          </a>
+        </li>
+        <li>
+          <a href="/guide/onboarding-document-checklist">
+            <h2>入职文件检查清单</h2>
+            <p>新员工入职，先查合同、社保、证件与试用期四件事。书面合同一个月内订立、社保三十天内登记，照着清单走一遍，入职风险当天看清。</p>
+          </a>
+        </li>
+        <li>
+          <a href="/guide/termination-risk-check">
+            <h2>解除与离职风险预检</h2>
+            <p>解除劳动合同先分清是哪一种，再算补偿、走程序。经济补偿按工作年限每满一年一个月工资，违法解除赔偿金是补偿标准的二倍。</p>
+          </a>
+        </li>
+        <li>
+          <a href="/guide/overdue-payment-recovery">
+            <h2>对方拖欠货款怎么办</h2>
+            <p>对方拖欠货款，先固定证据、书面催告，再选支付令或诉讼。诉讼时效一般三年，拖得越久越要先留痕。</p>
           </a>
         </li>
       </ul>

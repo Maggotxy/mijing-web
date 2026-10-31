@@ -34,5 +34,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: 'https://mjvia.com/guide/onboarding-document-checklist',
+      lastModified: published,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://mjvia.com/guide/termination-risk-check',
+      lastModified: published,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://mjvia.com/guide/overdue-payment-recovery',
+      lastModified: published,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ];
 }

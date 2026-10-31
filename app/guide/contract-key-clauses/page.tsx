@@ -120,6 +120,7 @@ export default function GuideContractKeyClauses() {
       </div>
 
       <nav className="guide-nav" aria-label="相关链接">
+        <a href="/guide/onboarding-document-checklist">下一篇：入职文件检查清单</a>
         <a href="/guide/sme-contract-review">相关指南：中小企业没有法务，怎么审合同</a>
         <a href="/guide">全部指南</a>
         <a href="/">返回首页</a>
