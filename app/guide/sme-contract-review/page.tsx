@@ -35,6 +35,7 @@ const structuredData = {
       datePublished: '2026-10-31',
       dateModified: '2026-10-31',
       mainEntityOfPage: 'https://mjvia.com/guide/sme-contract-review',
+      image: 'https://mjvia.com/images/og-image.png',
     },
     {
       '@type': 'FAQPage',

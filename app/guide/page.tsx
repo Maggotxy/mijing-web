@@ -16,14 +16,25 @@ export const metadata: Metadata = {
 
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'CollectionPage',
-  name: '指南',
-  description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款。',
-  url: 'https://mjvia.com/guide',
-  isPartOf: { '@type': 'WebSite', name: '小觅法务', url: 'https://mjvia.com/' },
-  hasPart: [
-    { '@type': 'Article', headline: '中小企业没有法务，怎么审合同', url: 'https://mjvia.com/guide/sme-contract-review' },
-    { '@type': 'Article', headline: '合同审查重点看哪些条款', url: 'https://mjvia.com/guide/contract-key-clauses' },
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      name: '指南',
+      description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款。',
+      url: 'https://mjvia.com/guide',
+      isPartOf: { '@type': 'WebSite', name: '小觅法务', url: 'https://mjvia.com/' },
+      hasPart: [
+        { '@type': 'Article', headline: '中小企业没有法务，怎么审合同', url: 'https://mjvia.com/guide/sme-contract-review' },
+        { '@type': 'Article', headline: '合同审查重点看哪些条款', url: 'https://mjvia.com/guide/contract-key-clauses' },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '首页', item: 'https://mjvia.com/' },
+        { '@type': 'ListItem', position: 2, name: '指南', item: 'https://mjvia.com/guide' },
+      ],
+    },
   ],
 };
 
