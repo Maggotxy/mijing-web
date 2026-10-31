@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>小觅法务 · 企业法务 AI</title>
-    <link>https://mjvia.com/</link>
+    <link>https://mjvia.com</link>
     <description>小觅法务是企业法务 AI 平台，专注合同、用工与企业知识，为没有专职法务的企业提供随时可用的日常法务支持。</description>
     <language>zh-CN</language>
     <copyright>天津觅径科技有限公司 · 津ICP备2026009754号-2</copyright>
-    <lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 16:24:33 +0800</lastBuildDate>
     <atom:link href="https://mjvia.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>小觅法务 · 企业法务 AI</title>
-      <link>https://mjvia.com/</link>
-      <guid isPermaLink="true">https://mjvia.com/</guid>
+      <link>https://mjvia.com</link>
+      <guid isPermaLink="true">https://mjvia.com</guid>
       <pubDate>Wed, 28 Oct 2026 00:00:00 +0800</pubDate>
       <description>从一份合同开始。小觅法务结合原文与企业立场辅助审查，确认后修订；覆盖合同、用工与企业知识，让每一步有据可查。</description>
     </item>
