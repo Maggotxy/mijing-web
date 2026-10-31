@@ -23,7 +23,7 @@ const structuredData = {
   '@graph': [
     { '@type': 'WebSite', name: '小觅法务', url: 'https://mjvia.com/', description, inLanguage: 'zh-CN' },
     { '@type': 'Organization', name: '小觅法务', alternateName: 'MIJING', legalName: '天津觅径科技有限公司', url: 'https://mjvia.com/', logo: 'https://mjvia.com/images/og-image.png' },
-    { '@type': 'VideoObject', name: '小觅法务品牌影像', description: '小觅法务品牌影像：墨雾中的金线成径、石柱廊道、纸面金线三幕。', thumbnailUrl: 'https://mjvia.com/images/hero-v2-poster.webp', contentUrl: 'https://mjvia.com/images/hero-v2.mp4', uploadDate: '2026-10-31T00:00:00+08:00', duration: 'PT16S' },
+    { '@type': 'VideoObject', name: '小觅法务品牌影像', description: '小觅法务品牌影像：城市黄昏航拍、合同审阅、签约落笔三幕实拍，按 Legora 深绿 #005032 做绿调。', thumbnailUrl: 'https://mjvia.com/images/hero-v3-poster.webp', contentUrl: 'https://mjvia.com/images/hero-v3.mp4', uploadDate: '2026-10-31T00:00:00+08:00', duration: 'PT16S' },
     { '@type': 'SoftwareApplication', name: '小觅法务', url: 'https://app.mjvia.com/', applicationCategory: 'BusinessApplication', operatingSystem: 'Web', description },
   ],
 };
