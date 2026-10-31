@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>觅径 MIJING · 企业法务 AI</title>
+    <link>https://mjvia.com/</link>
+    <description>从一份合同开始。觅径结合原文与企业立场辅助审查，确认后修订，让每一步有据可查。</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://mjvia.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>觅径 · 企业法务 AI | 纷繁之中，自有明径</title>
+      <link>https://mjvia.com/</link>
+      <guid isPermaLink="true">https://mjvia.com/</guid>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0800</pubDate>
+      <description>觅径是面向企业日常法务的 AI 助手，当前重点是合同审查：结合原文和企业立场分析问题，再由你决定是否修改。涉及重大交易、复杂争议或事实不清的问题，请咨询专业律师。</description>
+    </item>
+  </channel>
+</rss>

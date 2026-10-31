@@ -34,3 +34,13 @@
 - MiniMax-H3 原片生成记录与线上视频 hash 对应原有 docs/original-media-20261027.json，本轮未再次调用视频生成。
 
 部署完成：d7195c5，nginx -t通过后重载，mjvia-web.service重启active。使用正确Host核对3100/3101/官网/www四份HTML SHA一致，中文正常、备案与法律资料入口存在，失效链接消失；线上视频hash与MiniMax-H3生成回执一致。无push、新备份或法务服务重启。Nginx既有其他站点server_name警告保留，未改动无关站点。
+
+## 2026-10-31 GEO 爬取面与分享资产补齐
+
+- 背景：面向生成式引擎（GEO）的收录与引用。官网此前已有 OG/Twitter/JSON-LD（WebSite、Organization、SoftwareApplication、VideoObject、FAQPage）与 canonical，但缺爬取协议入口，且元数据引用了不存在的资产。
+- 新增 `app/robots.ts`：放行全部爬虫，并显式放行 GPTBot、OAI-SearchBot、ChatGPT-User、ClaudeBot、Claude-Web、anthropic-ai、PerplexityBot、Google-Extended、Applebot-Extended、Bytespider，指向 sitemap。
+- 新增 `app/sitemap.ts`：输出 mjvia.com 站点地图。
+- 新增 `public/llms.txt`：面向大模型的结构化站点摘要（定位、能力、FAQ、链接）。
+- 修复元数据中引用但缺失的资产：`/images/og-image.png`（由 H3 poster 转 1200×630）、`/images/apple-touch-icon.png` 与 192/512 图标（favicon.svg 生成）、`public/manifest.json`、`public/feed.xml`（alternates 中的 RSS 此前 404）。
+- 验证：vinext 构建通过；wrangler dev 本地实测 /robots.txt、/sitemap.xml、/llms.txt、/manifest.json 均正确返回，首页 200。
+- 未改动应用渲染与 nginx；未部署、未重启服务。

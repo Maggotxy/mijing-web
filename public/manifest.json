@@ -1,0 +1,17 @@
+{
+  "name": "觅径 MIJING · 企业法务 AI",
+  "short_name": "觅径",
+  "description": "企业法务 AI：从一份合同开始，结合原文与企业立场辅助审查，确认后修订，让每一步有据可查。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f6f6f1",
+  "theme_color": "#294e3c",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/images/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/images/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
