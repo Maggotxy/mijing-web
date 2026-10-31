@@ -18,6 +18,27 @@
 @media(max-width:380px){.header-cta{display:inline-flex;font-size:11px;padding-left:12px;gap:7px}.hero h1{font-size:48px}.stack-stage{transform:scale(.46)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.hero-media{transform:none}}
 .closing-invitation{margin-top:28px;max-width:580px}.closing-invitation p{font-size:clamp(16px,1.4vw,20px);line-height:1.9;letter-spacing:.025em}.closing-invitation p+p{margin-top:8px;font-size:16px;line-height:1.9;color:#ccd9ba}
+.guide{padding:150px var(--page-pad) 90px;max-width:780px;margin:0 auto}
+.guide .eyebrow{color:#6d786b}
+.guide h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4vw,52px);line-height:1.4;letter-spacing:.04em;margin:16px 0 18px}
+.guide .lede{font-size:17px;line-height:2;color:#52634c}
+.guide .guide-meta{font-size:12px;color:#7b8572;letter-spacing:.06em;margin-top:22px}
+.guide h2{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.5;margin:52px 0 6px;letter-spacing:.03em}
+.guide h3{font-size:19px;line-height:1.7;margin:34px 0 12px}
+.guide p{font-size:16px;line-height:2;color:#3d4a3c;margin-top:14px}
+.guide ol,.guide ul{margin:16px 0 0;padding-left:24px;font-size:16px;line-height:2;color:#3d4a3c}
+.guide li+li{margin-top:10px}
+.guide li strong{color:var(--ink)}
+.guide .faq-list{margin-top:22px}
+.guide .guide-nav{margin-top:64px;padding-top:28px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:12px 32px;font-size:14px;color:#52634c}
+.guide .guide-nav a{text-decoration:underline}
+.guide .guide-cta{margin-top:44px;padding:32px;background:#254333;color:#f1f1e6;border-radius:8px}
+.guide .guide-cta p{color:#f1f1e6;font-size:16px;line-height:1.9;margin-top:0}
+.guide .guide-cta .pill{margin-top:20px}
+.guide-list{list-style:none;margin:28px 0 0;padding:0}
+.guide-list li{padding:26px 0;border-top:1px solid var(--border)}
+.guide-list a h2{margin:0 0 10px}
+.guide-list a p{margin:0;color:#52634c}
 
 /* Production workspace entry and readable mobile narrative. */
 .footer nav{flex-wrap:wrap;row-gap:16px}.mobile-nav a:last-child{display:flex;align-items:center;justify-content:space-between}

@@ -3,16 +3,38 @@
   <channel>
     <title>小觅法务 · 企业法务 AI</title>
     <link>https://mjvia.com/</link>
-    <description>从一份合同开始。小觅法务结合原文与企业立场辅助审查，确认后修订，让每一步有据可查。</description>
+    <description>小觅法务是企业法务 AI 平台，专注合同、用工与企业知识，为没有专职法务的企业提供随时可用的日常法务支持。</description>
     <language>zh-CN</language>
+    <copyright>天津觅径科技有限公司 · 津ICP备2026009754号-2</copyright>
     <lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0800</lastBuildDate>
     <atom:link href="https://mjvia.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>小觅法务 · 企业法务 AI | 纷繁之中，自有明径</title>
+      <title>小觅法务 · 企业法务 AI</title>
       <link>https://mjvia.com/</link>
       <guid isPermaLink="true">https://mjvia.com/</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0800</pubDate>
+      <description>从一份合同开始。小觅法务结合原文与企业立场辅助审查，确认后修订；覆盖合同、用工与企业知识，让每一步有据可查。</description>
+    </item>
+    <item>
+      <title>关于小觅法务 · 企业法务 AI</title>
+      <link>https://mjvia.com/about</link>
+      <guid isPermaLink="true">https://mjvia.com/about</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0800</pubDate>
+      <description>了解小觅法务的定位、方式与日常法务能力边界：理解你的企业、看清真正关键、找到前行路径、沉淀长期理解。</description>
+    </item>
+    <item>
+      <title>中小企业没有法务，怎么审合同</title>
+      <link>https://mjvia.com/guide/sme-contract-review</link>
+      <guid isPermaLink="true">https://mjvia.com/guide/sme-contract-review</guid>
       <pubDate>Sat, 31 Oct 2026 00:00:00 +0800</pubDate>
-      <description>小觅法务是面向企业日常法务的 AI 助手，当前重点是合同审查：结合原文和企业立场分析问题，再由你决定是否修改。涉及重大交易、复杂争议或事实不清的问题，请咨询专业律师。</description>
+      <description>没有专职法务的中小企业，审合同先看什么、哪些条款不能漏、怎么留痕。小觅法务把合同审查变成可执行的日常流程。</description>
+    </item>
+    <item>
+      <title>合同审查重点看哪些条款</title>
+      <link>https://mjvia.com/guide/contract-key-clauses</link>
+      <guid isPermaLink="true">https://mjvia.com/guide/contract-key-clauses</guid>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0800</pubDate>
+      <description>审合同先看哪几条、哪几类条款最容易埋雷、违约金和定金怎么写才有效。按《民法典》合同编逐条对照，附可直接用的检查清单。</description>
     </item>
   </channel>
 </rss>
