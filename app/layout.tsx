@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next';
-import { faqs } from './faq';
 import './globals.css';
 const title = '小觅法务 · 企业法务 AI | 纷繁之中，自有明径';
 const description = '从一份合同开始。小觅法务结合原文与企业立场辅助审查，确认后修订，让每一步有据可查。';
@@ -26,9 +25,6 @@ const structuredData = {
     { '@type': 'Organization', name: '小觅法务', legalName: '天津觅径科技有限公司', url: 'https://mjvia.com/', logo: 'https://mjvia.com/images/og-image.png' },
     { '@type': 'VideoObject', name: '小觅法务原创品牌影像', description: '小觅法务原创庭院建筑影像。', thumbnailUrl: 'https://mjvia.com/images/mijing-original-poster.webp', contentUrl: 'https://mjvia.com/images/mijing-original.mp4', uploadDate: '2026-10-27T00:00:00+08:00', duration: 'PT16S' },
     { '@type': 'SoftwareApplication', name: '小觅法务', url: 'https://app.mjvia.com/', applicationCategory: 'BusinessApplication', operatingSystem: 'Web', description },
-    { '@type': 'FAQPage', mainEntity: faqs.map(({ question, answer }) => ({
-      '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer },
-    })) },
   ],
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
