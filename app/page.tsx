@@ -350,7 +350,7 @@ export default function Home() {
   const nav = (
     <>
       <a href="#vision" onClick={() => setMenu(false)}>
-        关于觅径
+        关于小觅法务
       </a>
       <a href="#approach" onClick={() => setMenu(false)}>
         我们的方式
@@ -367,10 +367,10 @@ export default function Home() {
         跳至主要内容
       </a>
       <header className={`site-header ${scrolled || menu ? 'solid' : ''}`}>
-        <a href="#top" className="brand" aria-label="觅径首页">
+        <a href="#top" className="brand" aria-label="小觅法务首页">
           <Mark />
           <span>
-            觅径<span className="brand-en">MIJING</span>
+            小觅法务
           </span>
         </a>
         <nav className="desktop-nav" aria-label="主导航">
@@ -406,7 +406,7 @@ export default function Home() {
           className="hero"
           id="top"
           ref={hero}
-          aria-label="觅径企业法务 AI"
+          aria-label="小觅法务企业法务 AI"
         >
           <div className="hero-media">
             <video
@@ -427,7 +427,7 @@ export default function Home() {
             <span className="small-dot" /> 为企业前行，觅一条明径
           </div>
           <div className="hero-content">
-            <p className="eyebrow">MIJING / LEGAL INTELLIGENCE</p>
+            <p className="eyebrow">小觅法务 / LEGAL INTELLIGENCE</p>
             <h1>
               纷繁之中，
               <br />
@@ -439,7 +439,7 @@ export default function Home() {
                 <br className="mobile-break" /> 让经营的每一步，更有把握。
               </p>
               <a href="#approach" className="pill light">
-                探索觅径{' '}
+                探索小觅法务{' '}
                 <span>
                   <ArrowDown size={17} />
                 </span>
@@ -481,7 +481,7 @@ export default function Home() {
                 一个需要认真作出的决定。
               </p>
               <p>
-                觅径将 AI 带入企业日常法务，
+                小觅法务将 AI 带入企业日常法务，
                 <br />
                 陪你理清纷繁，让前行有据。
               </p>
@@ -496,11 +496,11 @@ export default function Home() {
           className="journey"
           id="approach"
           ref={section}
-          aria-label="觅径的工作方式"
+          aria-label="小觅法务的工作方式"
         >
           <div className="journey-sticky">
             <div className="journey-heading">
-              <p className="eyebrow">THE MIJING APPROACH</p>
+              <p className="eyebrow">小觅法务 · 工作方式</p>
               <h2>
                 层层理解，
                 <br />
@@ -536,7 +536,7 @@ export default function Home() {
                     className={`glass-plane plane-${i} ${active === i ? 'is-active' : ''}`}
                     key={chapter.en}
                   >
-                    <span className="plane-corner">MIJING · 0{i + 1}</span>
+                    <span className="plane-corner">小觅法务 · 0{i + 1}</span>
                     <div className="plane-route">
                       <PlaneMotif index={i} />
                     </div>
@@ -592,7 +592,7 @@ export default function Home() {
                 decoding="async"
               />
               <div className="image-caption">
-                <span>觅径 · 与企业同行</span>
+                <span>小觅法务 · 与企业同行</span>
                 <ArrowUpRight size={18} />
               </div>
             </div>
@@ -651,7 +651,7 @@ export default function Home() {
               一起看清。
             </h2>
             <div className="closing-invitation">
-              <p>你公司的日常法务，觅径能帮到哪一步？</p>
+              <p>你公司的日常法务，小觅法务能帮到哪一步？</p>
               <p>进入工作台，从一份合同开始，了解与你业务相关的使用方式。</p>
             </div>
             <a className="pill light" href="https://app.mjvia.com">
@@ -693,7 +693,7 @@ export default function Home() {
           <a href="#top" className="brand">
             <Mark />
             <span>
-              觅径<span className="brand-en">MIJING</span>
+              小觅法务
             </span>
           </a>
           <nav aria-label="页脚导航">
@@ -705,13 +705,13 @@ export default function Home() {
           </a>
         </div>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} 觅径科技</span>
-          <p>觅径提供日常法务辅助。重大、复杂法律事务，请咨询专业律师。</p>
+          <span>© {new Date().getFullYear()} 小觅法务</span>
+          <p>小觅法务提供日常法务辅助。重大、复杂法律事务，请咨询专业律师。</p>
           <span>企业法务 AI</span>
         </div>
         <div className="footer-legal">
           <nav aria-label="网站与法律资料">
-            <a href="https://mjvia.com/about">关于觅径</a>
+            <a href="https://mjvia.com/about">关于小觅法务</a>
             <a href="https://flk.npc.gov.cn/" target="_blank" rel="noopener noreferrer">国家法律法规数据库</a>
             <a href="https://www.court.gov.cn/" target="_blank" rel="noopener noreferrer">最高人民法院</a>
           </nav>
