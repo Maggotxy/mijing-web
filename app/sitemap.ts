@@ -64,5 +64,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: 'https://mjvia.com/monthly/2026-11',
+      lastModified: new Date('2026-11-01T00:00:00+08:00'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ];
 }

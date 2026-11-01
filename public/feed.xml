@@ -6,7 +6,7 @@
     <description>小觅法务是企业法务 AI 平台，专注合同、用工与企业知识，为没有专职法务的企业提供随时可用的日常法务支持。</description>
     <language>zh-CN</language>
     <copyright>天津觅径科技有限公司 · 津ICP备2026009754号-2</copyright>
-    <lastBuildDate>Sat, 31 Oct 2026 19:55:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 10:54:00 +0800</lastBuildDate>
     <atom:link href="https://mjvia.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>小觅法务 · 企业法务 AI</title>
@@ -70,6 +70,13 @@
       <guid isPermaLink="true">https://mjvia.com/monthly/2026-10</guid>
       <pubDate>Sat, 31 Oct 2026 00:00:00 +0800</pubDate>
       <description>小觅月报 2026 年 10 月：品牌统一为小觅法务，5 篇指南上线，官网视频换新，价格 4,999 元/年，调研启动。</description>
+    </item>
+    <item>
+      <title>小觅月报 2026-11</title>
+      <link>https://mjvia.com/monthly/2026-11</link>
+      <guid isPermaLink="true">https://mjvia.com/monthly/2026-11</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0800</pubDate>
+      <description>小觅月报 2026 年 11 月：slogan 保留「明径」，百度备案号申诉已提交，调研仍待分发，12 月汇总调研结果。</description>
     </item>
   </channel>
 </rss>
