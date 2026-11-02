@@ -60,6 +60,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: 'https://mjvia.com/guide/severance-pay-calculation',
+      lastModified: publishedNov2,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: 'https://mjvia.com/survey/contract-management-2026',
       lastModified: published,
       changeFrequency: 'monthly',
