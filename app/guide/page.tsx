@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '指南 | 小觅法务',
-  description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办。答案前置、引用法条原文，给可验证的做法。',
+  description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办、合同里的定金最多是多少。答案前置、引用法条原文，给可验证的做法。',
   alternates: { canonical: '/guide' },
   openGraph: {
     title: '指南 | 小觅法务',
-    description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办。答案前置、引用法条原文，给可验证的做法。',
+    description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办、合同里的定金最多是多少。答案前置、引用法条原文，给可验证的做法。',
     type: 'website',
     url: '/guide',
     images: [{ url: '/images/og-image.png', width: 1200, height: 630, alt: '小觅法务 · 企业法务 AI' }],
@@ -20,7 +20,7 @@ const structuredData = {
     {
       '@type': 'CollectionPage',
       name: '指南',
-      description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办。',
+      description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办、合同里的定金最多是多少。',
       url: 'https://mjvia.com/guide',
       isPartOf: { '@type': 'WebSite', name: '小觅法务', url: 'https://mjvia.com/' },
       hasPart: [
@@ -29,6 +29,7 @@ const structuredData = {
         { '@type': 'Article', headline: '入职文件检查清单', url: 'https://mjvia.com/guide/onboarding-document-checklist' },
         { '@type': 'Article', headline: '解除与离职风险预检', url: 'https://mjvia.com/guide/termination-risk-check' },
         { '@type': 'Article', headline: '对方拖欠货款怎么办', url: 'https://mjvia.com/guide/overdue-payment-recovery' },
+        { '@type': 'Article', headline: '合同里的定金最多是多少？', url: 'https://mjvia.com/guide/deposit-max-amount' },
       ],
     },
     {
@@ -77,6 +78,12 @@ export default function GuideIndex() {
           <a href="/guide/overdue-payment-recovery">
             <h2>对方拖欠货款怎么办</h2>
             <p>对方拖欠货款，先固定证据、书面催告，再选支付令或诉讼。诉讼时效一般三年，拖得越久越要先留痕。</p>
+          </a>
+        </li>
+        <li>
+          <a href="/guide/deposit-max-amount">
+            <h2>合同里的定金最多是多少？</h2>
+            <p>定金最多是主合同标的额的百分之二十，超过部分不产生定金的效力。100 万元的合同，定金最多 20 万元。</p>
           </a>
         </li>
       </ul>
