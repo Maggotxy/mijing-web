@@ -159,7 +159,7 @@ function Mark({ className = '' }: { className?: string }) {
       aria-hidden="true"
     >
       <path
-        d="M9.51 8 20.21 13.26V26.68L9.45 32ZM30.49 14.15 22.69 18.05 22.63 26.68 30.55 32Z"
+        d="M4.26 2 L20.31 9.89 V30.02 L4.17 38 Z M35.74 11.22 L24.03 17.07 L23.95 30.02 L35.83 38 Z"
         stroke="currentColor"
         strokeWidth="1.7"
         strokeLinecap="square"
