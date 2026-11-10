@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: 'https://mjvia.com',
-      lastModified: published,
+      lastModified: publishedNov2,
       changeFrequency: 'weekly',
       priority: 1,
     },
