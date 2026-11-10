@@ -716,6 +716,8 @@ export default function Home() {
             <a href="https://mjvia.com/about">关于小觅法务</a>
             <a href="/guide/sme-contract-review">中小企业合同审查指南</a>
             <a href="/guide/contract-key-clauses">合同审查重点条款</a>
+            <a href="/monthly/2026-11">小觅月报</a>
+            <a href="/survey/contract-management-2026">合同管理调研</a>
             <a href="https://flk.npc.gov.cn/" target="_blank" rel="noopener noreferrer">国家法律法规数据库</a>
             <a href="https://www.court.gov.cn/" target="_blank" rel="noopener noreferrer">最高人民法院</a>
           </nav>
