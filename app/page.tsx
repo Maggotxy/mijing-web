@@ -689,6 +689,79 @@ export default function Home() {
             ))}
           </div>
         </section>
+        <section className="latest-guides section-pad" aria-labelledby="latest-guides-title">
+          <div className="faq-heading">
+            <h2 id="latest-guides-title">最新指南</h2>
+            <p>中小企业日常法务的实操指南：答案前置、引用法条原文，给可验证的做法。</p>
+          </div>
+          <ul className="guide-list">
+            <li>
+              <a href="/guide/sme-contract-review">
+                <h2>中小企业没有法务，怎么审合同</h2>
+                <p>没有专职法务的中小企业，审合同先看什么、哪些条款不能漏、怎么留痕。小觅法务把合同审查变成可执行的日常流程。</p>
+              </a>
+            </li>
+            <li>
+              <a href="/guide/contract-key-clauses">
+                <h2>合同审查重点看哪些条款</h2>
+                <p>审合同先看哪几条、哪几类条款最容易埋雷、违约金和定金怎么写才有效。按《民法典》合同编逐条对照，附可直接用的检查清单。</p>
+              </a>
+            </li>
+            <li>
+              <a href="/guide/onboarding-document-checklist">
+                <h2>入职文件检查清单</h2>
+                <p>新员工入职，先查合同、社保、证件与试用期四件事。书面合同一个月内订立、社保三十天内登记，照着清单走一遍，入职风险当天看清。</p>
+              </a>
+            </li>
+            <li>
+              <a href="/guide/termination-risk-check">
+                <h2>解除与离职风险预检</h2>
+                <p>解除劳动合同先分清是哪一种，再算补偿、走程序。经济补偿按工作年限每满一年一个月工资，违法解除赔偿金是补偿标准的二倍。</p>
+              </a>
+            </li>
+            <li>
+              <a href="/guide/overdue-payment-recovery">
+                <h2>对方拖欠货款怎么办</h2>
+                <p>对方拖欠货款，先固定证据、书面催告，再选支付令或诉讼。诉讼时效一般三年，拖得越久越要先留痕。</p>
+              </a>
+            </li>
+            <li>
+              <a href="/guide/deposit-max-amount">
+                <h2>合同里的定金最多是多少？</h2>
+                <p>定金最多是主合同标的额的百分之二十，超过部分不产生定金的效力。100 万元的合同，定金最多 20 万元。</p>
+              </a>
+            </li>
+            <li>
+              <a href="/guide/severance-pay-calculation">
+                <h2>解除劳动合同，经济补偿怎么算？</h2>
+                <p>每满一年一个月工资，六个月以上不满一年按一年，不满六个月半个月。3 年 8 个月、月薪 1 万，补偿 4 万元。</p>
+              </a>
+            </li>
+            <li>
+              <a href="/guide/labor-arbitration">
+                <h2>劳动争议怎么申请仲裁？</h2>
+                <p>劳动争议先协商、调解，调解不成再申请仲裁。申请仲裁的时效期间为一年，仲裁庭应当自受理之日起四十五日内结束裁决。</p>
+              </a>
+            </li>
+            <li>
+              <a href="/guide/contract-expiry-renewal">
+                <h2>劳动合同到期不续签，补偿怎么算？</h2>
+                <p>劳动合同到期不续签，补偿要看是谁不续、条件变没变：用人单位不续订要给经济补偿；维持或提高条件续订、劳动者不同意续订的，不用给。</p>
+              </a>
+            </li>
+            <li>
+              <a href="/guide/probation-period">
+                <h2>试用期最长是多久？工资最低是多少？</h2>
+                <p>试用期长短看合同期限，工资有两条底线：不低于相同岗位最低档工资或约定工资的百分之八十，并不低于当地最低工资标准。</p>
+              </a>
+            </li>
+          </ul>
+          <nav className="guide-nav" aria-label="主题页">
+            <a href="/enterprise-legal-agent">企业法务 Agent｜面向中小企业的法务智能体</a>
+            <a href="/legal-ai">法务AI｜中小企业法务 AI 怎么选</a>
+            <a href="/guide">全部指南</a>
+          </nav>
+        </section>
       </main>
       <footer className="footer section-pad">
         <div className="footer-top">

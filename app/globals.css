@@ -97,3 +97,11 @@
 .survey-done h2{margin:0 0 10px}
 .survey-done p{margin-top:10px}
 .survey-done a{text-decoration:underline}
+.guide table{width:100%;border-collapse:collapse;margin-top:18px;font-size:16px;line-height:1.9;color:#3d4a3c}
+.guide th,.guide td{padding:12px 14px;border-top:1px solid var(--border);text-align:left;vertical-align:top}
+.guide th{color:var(--ink);font-weight:600}
+.latest-guides{padding-top:64px;padding-bottom:64px}
+.latest-guides .guide-list a h2{font-family:var(--serif);font-weight:400;font-size:22px;line-height:1.5}
+.latest-guides .guide-list a p{font-size:15px;line-height:1.9}
+.latest-guides .guide-nav{margin-top:36px;padding-top:24px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:12px 32px;font-size:14px;color:#52634c}
+.latest-guides .guide-nav a{text-decoration:underline}

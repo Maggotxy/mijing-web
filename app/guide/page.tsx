@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '指南 | 小觅法务',
-  description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办、合同里的定金最多是多少、解除劳动合同经济补偿怎么算。答案前置、引用法条原文，给可验证的做法。',
+  description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办、合同里的定金最多是多少、解除劳动合同经济补偿怎么算、劳动争议怎么申请仲裁、劳动合同到期不续签补偿怎么算、试用期最长多久工资最低多少。答案前置、引用法条原文，给可验证的做法。',
   alternates: { canonical: '/guide' },
   openGraph: {
     title: '指南 | 小觅法务',
-    description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办、合同里的定金最多是多少、解除劳动合同经济补偿怎么算。答案前置、引用法条原文，给可验证的做法。',
+    description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办、合同里的定金最多是多少、解除劳动合同经济补偿怎么算、劳动争议怎么申请仲裁、劳动合同到期不续签补偿怎么算、试用期最长多久工资最低多少。答案前置、引用法条原文，给可验证的做法。',
     type: 'website',
     url: '/guide',
     images: [{ url: '/images/og-image.png', width: 1200, height: 630, alt: '小觅法务 · 企业法务 AI' }],
@@ -20,7 +20,7 @@ const structuredData = {
     {
       '@type': 'CollectionPage',
       name: '指南',
-      description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办、合同里的定金最多是多少、解除劳动合同经济补偿怎么算。',
+      description: '中小企业日常法务指南：没有法务怎么审合同、合同审查重点看哪些条款、入职文件检查清单、解除与离职风险预检、对方拖欠货款怎么办、合同里的定金最多是多少、解除劳动合同经济补偿怎么算、劳动争议怎么申请仲裁、劳动合同到期不续签补偿怎么算、试用期最长多久工资最低多少。',
       url: 'https://mjvia.com/guide',
       isPartOf: { '@type': 'WebSite', name: '小觅法务', url: 'https://mjvia.com/' },
       hasPart: [
@@ -31,6 +31,9 @@ const structuredData = {
         { '@type': 'Article', headline: '对方拖欠货款怎么办', url: 'https://mjvia.com/guide/overdue-payment-recovery' },
         { '@type': 'Article', headline: '合同里的定金最多是多少？', url: 'https://mjvia.com/guide/deposit-max-amount' },
         { '@type': 'Article', headline: '解除劳动合同，经济补偿怎么算？', url: 'https://mjvia.com/guide/severance-pay-calculation' },
+        { '@type': 'Article', headline: '劳动争议怎么申请仲裁？', url: 'https://mjvia.com/guide/labor-arbitration' },
+        { '@type': 'Article', headline: '劳动合同到期不续签，补偿怎么算？', url: 'https://mjvia.com/guide/contract-expiry-renewal' },
+        { '@type': 'Article', headline: '试用期最长是多久？工资最低是多少？', url: 'https://mjvia.com/guide/probation-period' },
       ],
     },
     {
@@ -91,6 +94,24 @@ export default function GuideIndex() {
           <a href="/guide/severance-pay-calculation">
             <h2>解除劳动合同，经济补偿怎么算？</h2>
             <p>每满一年一个月工资，六个月以上不满一年按一年，不满六个月半个月。3 年 8 个月、月薪 1 万，补偿 4 万元。</p>
+          </a>
+        </li>
+        <li>
+          <a href="/guide/labor-arbitration">
+            <h2>劳动争议怎么申请仲裁？</h2>
+            <p>劳动争议先协商、调解，调解不成再申请仲裁。申请仲裁的时效期间为一年，仲裁庭应当自受理之日起四十五日内结束裁决。</p>
+          </a>
+        </li>
+        <li>
+          <a href="/guide/contract-expiry-renewal">
+            <h2>劳动合同到期不续签，补偿怎么算？</h2>
+            <p>劳动合同到期不续签，补偿要看是谁不续、条件变没变：用人单位不续订要给经济补偿；维持或提高条件续订、劳动者不同意续订的，不用给。</p>
+          </a>
+        </li>
+        <li>
+          <a href="/guide/probation-period">
+            <h2>试用期最长是多久？工资最低是多少？</h2>
+            <p>试用期长短看合同期限，工资有两条底线：不低于相同岗位最低档工资或约定工资的百分之八十，并不低于当地最低工资标准。</p>
           </a>
         </li>
       </ul>
